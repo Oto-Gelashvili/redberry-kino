@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
 import "./globals.css";
+import { Header } from "./components/layout/header/header";
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -21,7 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={archivo.className}>{children}</body>
+      <body className={archivo.className}>
+        {" "}
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
