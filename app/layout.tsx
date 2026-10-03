@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
 import "./globals.css";
-import { Header } from "./components/layout/header/header";
+import { Header } from "@/components/layout/header/header";
 
 const archivo = Archivo({
   variable: "--font-archivo",

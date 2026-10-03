@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { AuthButtons } from "@/features/auth/components/AuthButtons";
 
 export function Header() {
   return (
@@ -24,10 +25,10 @@ export function Header() {
       <div className="flex items-center gap-[3.2rem]">
         <label
           className="
-    flex h-[4.1rem] w-152 items-center
-    gap-[0.4rem] rounded-full
-    bg-(--tint-white) px-[1.2rem] py-[0.6rem]
-  "
+            flex h-[4.1rem] w-152 items-center
+            gap-[0.4rem] rounded-full
+            bg-(--tint-white) px-[1.2rem] py-[0.6rem]
+          "
         >
           <Image src="/icons/search.svg" alt="search" width={14} height={14} />
 
@@ -36,19 +37,15 @@ export function Header() {
             type="search"
             placeholder="Search films and live events"
             className="
-      flex-1 bg-transparent outline-none
-      placeholder:text-(--text-primary)
-      text-[1.4rem]/[130%]
-      font-normal
-      
-    "
+              flex-1 bg-transparent outline-none
+              placeholder:text-(--text-primary)
+              text-[1.4rem]
+              font-normal
+            "
           />
         </label>
 
-        <div className="flex items-center gap-[1.2rem]">
-          <button className=" btn-primary ">Sign up</button>
-          <button className=" btn-secondary ">Log in</button>
-        </div>
+        <AuthButtons />
       </div>
     </header>
   );
